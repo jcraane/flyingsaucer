@@ -83,7 +83,7 @@ public class DOMTreeResolver implements TreeResolver {
         }
 
         if (namespaceURI != null) {
-            return name.equalsIgnoreCase(localName) && namespaceURI.equals(e.getNamespaceURI());
+            return name.equalsIgnoreCase(localName) && namespaceURI.equalsIgnoreCase(e.getNamespaceURI());
         } else if (namespaceURI == TreeResolver.NO_NAMESPACE) {
             return name.equalsIgnoreCase(eName) && e.getNamespaceURI() == null;
         } else /* if (namespaceURI == null) */ {
